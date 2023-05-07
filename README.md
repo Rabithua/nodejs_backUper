@@ -18,13 +18,8 @@ nodejs 备份数据库文件到 cos
 npm install
 ```
 
-- 修改`backup.js`文件(文件里有详细解释)
- - SecretId
- - SecretKey
- - folderPath
- - bucket
- - region
- - interval
+- 修改`backup.js`文件(文件里有详细解释) 
+- 需要修改的字段有`SecretId` `SecretKey` `folderPath` `bucket` `region` `interval`
 - 运行脚本，首次可以先把`interval`修改成一分钟也就是`60 * 1000`
 
 ```
