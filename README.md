@@ -1,4 +1,4 @@
-# nodejs_backUper
+# nodejs_backUper / [English README](https://github.com/Rabithua/nodejs_backUper/blob/main/README.md)
 
 nodejs 备份数据库文件到 cos
 
