@@ -4,6 +4,8 @@
 
 nodejs 备份数据库文件到 cos
 
+<img width="542" alt="截屏2023-05-07 17 09 14" src="https://user-images.githubusercontent.com/34543831/236668501-fd4d84db-4cea-455e-afef-f617d2749616.png">
+
 ## 环境准备
 
 - 安装 nodejs pm2 (这块儿网上大把教程就不写了)
