@@ -25,14 +25,14 @@ npm install
 - The fields that need to be modified are `COS_BUCKET`, `COS_REGION`, `COS_SECRETID`, `COS_SECRETKEY`, and `PATH`.
 - Run the script. For the first time, you can change the backup interval in the `backup.js` file to one minute, which is `60 * 1000`.
 
+memoBackup can be any name you like for the pm2 process
+Use this command to output logs to the current directory
 ```
-// memoBackup can be any name you like for the pm2 process
-// Use this command to output logs to the current directory
-
 pm2 start backup.js --name memoBackup --log console.log  --error error.log
+```
 
-// Use this command to disable log output
-
+Use this command to disable log output
+```
 pm2 start backup.js --name memoBackup
 ```
 
