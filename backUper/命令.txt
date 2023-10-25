@@ -1,8 +1,0 @@
-// 使用前需要cd到当前目录
-// memoBackup 为pm2进程名字，可以自由修改
-
-//输出日志到当前目录，使用这条
-pm2 start backup.js --name memoBackup --log console.log  --error error.log 
-
-//不想输出日志，使用这条
-pm2 start backup.js --name memoBackup

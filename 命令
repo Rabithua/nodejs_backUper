@@ -1,0 +1,1 @@
+pm2 start backup.js --name nodeBackup_memo --log console.log  --error error.log 

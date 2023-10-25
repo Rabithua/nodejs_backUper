@@ -1,0 +1,12 @@
+# 修改 env 文件名为 .env，并替换以下数据为自己的数据
+COS_BUCKET="memos-xxxxxxxx"
+COS_REGION="ap-nanjing"
+COS_SECRETID="AKIDxxxxxxxxxxxxxxsXqvjKadP"
+COS_SECRETKEY="f6GAoCKan9F5fxxxxxjW3PVLuDG3arse"
+
+# 自动备份的文件夹位置
+PATH="/root/data/docker_data/memos"
+
+# 选配，备份失败 bark 通知
+BARK_URL="https://api.day.app/Xe9JYxxxxxxxxxTsvxjJfE"
+BARK_ICON="https://memores-cos.rabithua.club/web/logo.png"
