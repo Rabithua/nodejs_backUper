@@ -2,6 +2,7 @@
 
 A node.js script for backing up database files to Tencent Cloud Object Storage (COS).
 
+<img width="542" alt="截屏2023-05-07 17 09 14" src="https://user-images.githubusercontent.com/34543831/236668501-fd4d84db-4cea-455e-afef-f617d2749616.png">
 ## Environment Setup
 
 - Install node.js and pm2 (there are plenty of tutorials available online, so we won't cover that here).
