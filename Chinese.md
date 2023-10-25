@@ -1,44 +1,46 @@
+[English README](https://github.com/Rabithua/nodejs_backUper/blob/main/English.md)
+
 # nodejs_backUper
 
-A node.js script for backing up database files to Tencent Cloud Object Storage (COS).
+nodejs 备份数据库文件到 cos
 
 <img width="542" alt="截屏2023-05-07 17 09 14" src="https://user-images.githubusercontent.com/34543831/236668501-fd4d84db-4cea-455e-afef-f617d2749616.png">
-## Environment Setup
 
-- Install node.js and pm2 (there are plenty of tutorials available online, so we won't cover that here).
-- Create a [bucket](https://console.cloud.tencent.com/cos/bucket?action=create) and a [secret key](https://console.cloud.tencent.com/cam/capi), and keep them handy.
+## 环境准备
 
-## Deployment
+- 安装 nodejs pm2 (这块儿网上大把教程就不写了)
+- 腾讯云 cos 创建一个[储存桶](https://console.cloud.tencent.com/cos/bucket?action=create)，创建一个[密钥](https://console.cloud.tencent.com/cam/capi)，并记录保存
 
-- Download the source code from GitHub [here](https://github.com/Rabithua/nodejs_backUper/archive/refs/heads/main.zip).
-- Upload it to your server wherever you like, preferably somewhere near the location of your database files.
-- Unzip the file and navigate to the `backUper` directory.
-- Run the following command to install npm packages:
+## 开始部署
+
+- 下载 github 源码，[点我下载](https://github.com/Rabithua/nodejs_backUper/archive/refs/heads/main.zip)
+- 上传到你的服务器，目录自己决定，最好和 memos 数据库文件接近的位置
+- 解压，cd 到 backUper 文件夹下
+- 运行以下命令安装 npm 包
 
 ```
 npm install
 ```
 
-- Modify the `backup.js` file (details are explained inside the file).
-- The fields that need to be modified are `SecretId`, `SecretKey`, `folderPath`, `bucket`, `region`, and `interval`.
-- Run the script. You may set the `interval` to one minute (`60 * 1000`) for the first run.
+- 修改`env`文件为`.env`(文件里有详细解释)
+- 需要修改的字段有`COS_BUCKET` `COS_REGION` `COS_SECRETID` `COS_SECRETKEY` `PATH`
+- 运行脚本，首次可以先把`backup.js`文件中备份时间间隔 `interval` 修改成一分钟也就是`60 * 1000`
 
 ```
-// memoBackup can be any name you like for the pm2 process
-// Use this command to output logs to the current directory
+// memoBackup 为pm2进程名字，可以自由修改
 
+//输出日志到当前目录，使用这条
 pm2 start backup.js --name memoBackup --log console.log  --error error.log
 
-// Use this command to disable log output
-
+//不想输出日志，使用这条
 pm2 start backup.js --name memoBackup
 ```
 
-- Check the COS bucket to see if the backup was successful.
-- Finally, remember to set the `interval` to an appropriate time interval.
+- 打开储存桶文件夹，看看备份成功了吗
+- 最后记得修改`interval`，为合适的时间间隔
 
-## That's it! 😘 Take a look at these if you want:
+## 完事儿 😘，可以再看看这些
 
-[Memo Wechat Mini Program](https://github.com/Rabithua/memos_wmp)
+[麦默小程序](https://github.com/Rabithua/memos_wmp)
 
-### Please give us a star, thank you!
+### 来个 star 吧，求求辣
