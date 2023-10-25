@@ -21,9 +21,9 @@ A node.js script for backing up database files to Tencent Cloud Object Storage (
 npm install
 ```
 
-- Modify the `backup.js` file (details are explained inside the file).
-- The fields that need to be modified are `SecretId`, `SecretKey`, `folderPath`, `bucket`, `region`, and `interval`.
-- Run the script. You may set the `interval` to one minute (`60 * 1000`) for the first run.
+- Rename the `env` file to `.env` (the file contains detailed explanations).
+- The fields that need to be modified are `COS_BUCKET`, `COS_REGION`, `COS_SECRETID`, `COS_SECRETKEY`, and `PATH`.
+- Run the script. For the first time, you can change the backup interval in the `backup.js` file to one minute, which is `60 * 1000`.
 
 ```
 // memoBackup can be any name you like for the pm2 process
